@@ -13,18 +13,18 @@ function checkEvenOrOdd(number) {
 checkEvenOrOdd(125);
 
 function findSmallest(num1, num2, num3) {
-     if (!Number(num1) && Number(num2) && Number(num3)) {
-          return 'enter valid num'
-     }
-     if (num1 < num2 && num1 < num3) {
-          return num1;
-     } else if (num2 < num1 && num2 < num3) {
-          return num2;
-     } else {
-          return num3;
+     if(typeof(num1) !== 'number' || typeof(num2) !=='number' || typeof(num3) !== 'number'){
+          return 'Enter valid number only'
      }
 
-     // return Math.min(num1, num2, num3);
+     if (num1 <= num2 && num1 <= num3) {
+          return Number(num1);
+     } else if (num2 <= num1 && num2 <= num3) {
+          return Number(num2);
+     } else {
+          return Number(num3);
+     }
 }
 
-console.log(findSmallest(4.55, -10, 11));
+console.log(findSmallest(12, -10, 11));
+
