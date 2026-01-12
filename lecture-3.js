@@ -39,8 +39,12 @@ console.log(findDuplicate([1, 2, 5, 5, 1, 5, 4, 2, 3]));
 
 
 function findLargest(arr) {
-     if (!Array.isArray(arr)) {
-          return 'Enter valid array';
+     if (!Array.isArray(arr) || arr.length === 0) {
+          return `Enter valid array only!`;
+     }
+
+     if (arr.every(e => e !== 'number')) {
+          return `Enter valid number array only!`;
      }
 
      let result = arr[0];
