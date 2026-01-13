@@ -1,3 +1,4 @@
+import userData from './users.constant.js';
 // 3,5
 // 3,6,9,12,15
 
@@ -61,3 +62,13 @@ function getAllVowelsAsString(strInput) {
 }
 
 console.log(getAllVowelsAsString(strData));
+
+function getFilteredUsers(userDataList){
+
+     return userDataList.filter(element => 
+          element.skills.includes('TypeScript')
+     )
+}
+
+console.log(getFilteredUsers(userData));
+
