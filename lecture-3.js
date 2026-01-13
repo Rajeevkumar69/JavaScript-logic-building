@@ -17,8 +17,8 @@ console.log(reverseString('Software development'));
 
 
 function findDuplicate(arrayArg) {
-     if (!Array.isArray(arrayArg)) {
-          return 'Enter valid array';
+     if (!Array.isArray(arrInput) || !arrInput.every(element => typeof element === 'number')) {
+          return 'Enter valid non-zero array only';
      }
 
      let seen = new Set();
